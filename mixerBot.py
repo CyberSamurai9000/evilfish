@@ -14,10 +14,10 @@ from telepot.namedtuple import InlineKeyboardMarkup, InlineKeyboardButton
 from telepot.namedtuple import InlineQueryResultArticle, InlineQueryResultPhoto, InputTextMessageContent
 from pprint import pprint
 
-conn = sqlite3.connect('archive.sqlite', check_same_thread = True)
+conn = sqlite3.connect('archive.sqlite', check_same_thread = False)
 cur = conn.cursor()
 
-conn2 = sqlite3.connect('fish.sqlite', check_same_thread = True)
+conn2 = sqlite3.connect('fish.sqlite', check_same_thread = False)
 cur2 = conn2.cursor()
 
 cur.execute('''
